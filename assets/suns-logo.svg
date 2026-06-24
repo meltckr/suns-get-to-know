@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 190" width="210" height="190">
+  <defs>
+    <radialGradient id="sunFill" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#ffb81c"/>
+      <stop offset="0.55" stop-color="#f7941d"/>
+      <stop offset="1" stop-color="#e56020"/>
+    </radialGradient>
+    <radialGradient id="ballFill" cx="0.4" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#f07d2a"/>
+      <stop offset="1" stop-color="#d4541a"/>
+    </radialGradient>
+  </defs>
+
+  <!-- motion streaks trailing lower-left -->
+  <g fill="#f7941d">
+    <path d="M70 116 L20 150 L30 150 L82 120 Z"/>
+    <path d="M76 126 L34 158 L46 158 L86 130 Z" fill="#e56020"/>
+    <path d="M64 108 L8 132 L18 134 L74 113 Z" fill="#ffb81c"/>
+  </g>
+
+  <!-- spiky sunburst -->
+  <polygon fill="url(#sunFill)" stroke="#e56020" stroke-width="1"
+    points="120.0,15.0 129.0,49.9 150.6,21.1 145.6,56.8 176.6,38.4 158.2,69.4 193.9,64.4 165.1,86.0 200.0,95.0 165.1,104.0 193.9,125.6 158.2,120.6 176.6,151.6 145.6,133.2 150.6,168.9 129.0,140.1 120.0,175.0 111.0,140.1 89.4,168.9 94.4,133.2 63.4,151.6 81.8,120.6 46.1,125.6 74.9,104.0 40.0,95.0 74.9,86.0 46.1,64.4 81.8,69.4 63.4,38.4 94.4,56.8 89.4,21.1 111.0,49.9"/>
+
+  <!-- basketball -->
+  <g transform="rotate(-18 120 95)">
+    <circle cx="120" cy="95" r="40" fill="url(#ballFill)"/>
+    <circle cx="120" cy="95" r="40" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+    <!-- seams -->
+    <line x1="80" y1="95" x2="160" y2="95" stroke="#1a1a1a" stroke-width="2.5"/>
+    <line x1="120" y1="55" x2="120" y2="135" stroke="#1a1a1a" stroke-width="2.5"/>
+    <path d="M92 66 Q120 95 92 124" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+    <path d="M148 66 Q120 95 148 124" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+  </g>
+</svg>

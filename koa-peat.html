@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  AVC "GET TO KNOW" PLAYER FEATURE  ·  Reusable template
+  ----------------------------------------------------------------------------
+  Built for Phoenix Suns ownership / front office. Fan-facing editorial quality.
+  To reuse for any drafted or acquired player:
+    1) Swap the PLAYER fields in the hero (name, number, vitals).
+    2) Replace the section copy. Keep the section order + classes.
+    3) Drop an official photo into .hero-portrait (replace the monogram block).
+  Player file: Koa Peat — drafted 30th overall, 2026 NBA Draft.
+  Prepared by Accelerated Velocity Consulting.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get to Know Koa Peat · Phoenix Suns</title>
+
+<!-- ===== OG / SOCIAL METADATA =====
+     Update meltckr.github.io/suns-get-to-know below to the live deploy URL before sharing.
+     og:image must be an ABSOLUTE url for previews to render. -->
+<meta name="description" content="Get to Know Koa Peat — the homegrown warrior the Phoenix Suns drafted 30th overall in 2026. Four state titles, four USA Basketball golds, a Final Four. An AVC player feature.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Phoenix Suns · Get to Know">
+<meta property="og:title" content="Get to Know Koa Peat">
+<meta property="og:description" content="A homegrown warrior comes home. The most decorated winner in USA Basketball junior history joins the Suns. An AVC player feature.">
+<meta property="og:url" content="https://meltckr.github.io/suns-get-to-know/koa-peat.html">
+<meta property="og:image" content="https://meltckr.github.io/suns-get-to-know/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Get to Know Koa Peat — Phoenix Suns player feature by Accelerated Velocity Consulting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Get to Know Koa Peat">
+<meta name="twitter:description" content="A homegrown warrior comes home. An AVC player feature for the Phoenix Suns.">
+<meta name="twitter:image" content="https://meltckr.github.io/suns-get-to-know/assets/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#1d1160;
+    --purple-deep:#160d4a;
+    --purple-ink:#0c0726;
+    --orange:#e56020;
+    --orange-bright:#f7941d;
+    --sun:#ffb81c;
+    --gray:#63727a;
+    --paper:#f5f3ef;
+    --paper-2:#ece8e1;
+    --ink:#15131f;
+    --line:rgba(29,17,96,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Archivo',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ---------- KICKER / MASTHEAD ---------- */
+  .masthead{
+    background:var(--purple-ink);
+    color:#fff;
+    border-bottom:3px solid var(--orange);
+  }
+  .masthead .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 24px;
+  }
+  .masthead .lockup{display:flex;align-items:center;gap:12px}
+  .masthead .suns-mark{height:38px;width:auto;flex:none}
+  .masthead .brand{
+    font-family:'Archivo Narrow';font-weight:700;letter-spacing:.3em;
+    text-transform:uppercase;font-size:12px;color:#fff;line-height:1;
+  }
+  .masthead .brand span{display:block;color:var(--sun);font-size:10px;letter-spacing:.34em;margin-top:3px}
+  .masthead .series{
+    font-family:'Archivo Narrow';font-weight:600;letter-spacing:.26em;
+    text-transform:uppercase;font-size:10px;color:rgba(255,255,255,.6);
+  }
+  .avc-mark{height:30px;width:auto;display:block}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(120% 120% at 78% -10%, rgba(229,96,32,.55) 0%, rgba(229,96,32,0) 42%),
+      radial-gradient(90% 90% at 12% 110%, rgba(255,184,28,.18) 0%, rgba(255,184,28,0) 50%),
+      linear-gradient(160deg,var(--purple) 0%, var(--purple-deep) 55%, var(--purple-ink) 100%);
+    color:#fff;
+  }
+  /* sunburst / kachina motif */
+  .hero::before{
+    content:"";position:absolute;top:-40%;right:-18%;width:760px;height:760px;
+    background:
+      repeating-conic-gradient(from 0deg at 50% 50%,
+        rgba(255,184,28,.10) 0deg 6deg, transparent 6deg 16deg);
+    border-radius:50%;
+    -webkit-mask:radial-gradient(circle, #000 38%, transparent 70%);
+            mask:radial-gradient(circle, #000 38%, transparent 70%);
+    pointer-events:none;
+  }
+  .hero .wrap{
+    position:relative;z-index:2;
+    display:grid;grid-template-columns:1.25fr .85fr;gap:40px;
+    align-items:center;padding:54px 24px 60px;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-family:'Archivo Narrow';font-weight:700;letter-spacing:.4em;
+    text-transform:uppercase;font-size:13px;
+    color:var(--sun);margin-bottom:18px;
+  }
+  .hero h1{
+    font-family:'Anton',sans-serif;font-weight:400;
+    font-size:clamp(64px,11vw,128px);line-height:.86;
+    letter-spacing:.5px;text-transform:uppercase;
+    margin-bottom:22px;
+  }
+  .hero h1 .last{color:var(--orange-bright)}
+  .dek{
+    font-size:19px;line-height:1.5;color:rgba(255,255,255,.86);
+    max-width:30em;font-weight:500;
+  }
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;
+  }
+  .chip{
+    font-family:'Archivo Narrow';font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;font-size:12px;
+    background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);
+    padding:7px 13px;border-radius:100px;color:#fff;
+  }
+  .chip.hot{background:var(--orange);border-color:var(--orange)}
+
+  /* portrait / monogram slot — replace with official photo */
+  .hero-portrait{
+    position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;
+    background:
+      linear-gradient(180deg, rgba(255,184,28,.16), rgba(12,7,38,.6)),
+      linear-gradient(160deg,#2a1a7a,#0c0726);
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow:0 30px 60px -24px rgba(0,0,0,.7);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .hero-portrait .num{
+    font-family:'Anton';font-size:170px;line-height:.8;color:#fff;opacity:.96;
+    text-shadow:0 8px 30px rgba(0,0,0,.45);
+  }
+  .hero-portrait .mono{
+    font-family:'Archivo Narrow';letter-spacing:.3em;text-transform:uppercase;
+    font-size:13px;color:var(--sun);margin-top:14px;font-weight:700;
+  }
+  .hero-portrait .slot-note{
+    position:absolute;bottom:10px;left:0;right:0;
+    font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:rgba(255,255,255,.4);font-family:'Archivo Narrow';
+  }
+
+  /* ---------- VITALS STRIP ---------- */
+  .vitals{
+    background:var(--purple-ink);color:#fff;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .vitals .wrap{
+    display:grid;grid-template-columns:repeat(6,1fr);gap:0;
+    padding:0 24px;
+  }
+  .vital{
+    padding:20px 14px;text-align:center;
+    border-right:1px solid rgba(255,255,255,.08);
+  }
+  .vital:last-child{border-right:none}
+  .vital .k{
+    font-family:'Archivo Narrow';font-weight:600;letter-spacing:.18em;
+    text-transform:uppercase;font-size:10px;color:var(--sun);margin-bottom:6px;
+  }
+  .vital .v{font-family:'Archivo';font-weight:800;font-size:18px}
+
+  /* ---------- BODY SECTIONS ---------- */
+  section{padding:58px 0}
+  .sec-label{
+    font-family:'Archivo Narrow';font-weight:700;letter-spacing:.34em;
+    text-transform:uppercase;font-size:12px;color:var(--orange);
+    margin-bottom:12px;display:flex;align-items:center;gap:12px;
+  }
+  .sec-label::before{content:"";width:28px;height:3px;background:var(--orange)}
+  h2{
+    font-family:'Archivo';font-weight:900;letter-spacing:-.5px;
+    font-size:clamp(28px,4.4vw,42px);line-height:1.02;margin-bottom:18px;
+    color:var(--purple);
+  }
+  h3{
+    font-family:'Archivo';font-weight:800;font-size:20px;
+    color:var(--purple);margin-bottom:8px;
+  }
+  p{font-size:17px;margin-bottom:16px;color:#23202e}
+  p .em{color:var(--orange);font-weight:700}
+  .lede p:first-of-type{font-size:20px;line-height:1.5}
+  .lede p:first-of-type::first-letter{
+    font-family:'Anton';float:left;font-size:78px;line-height:.7;
+    padding:8px 14px 0 0;color:var(--orange);
+  }
+
+  .alt{background:var(--paper-2)}
+  .dark{background:var(--purple-ink);color:#fff}
+  .dark h2{color:#fff}
+  .dark p{color:rgba(255,255,255,.84)}
+  .dark .sec-label{color:var(--sun)}
+  .dark .sec-label::before{background:var(--sun)}
+
+  /* pull quote */
+  .pull{
+    border-left:4px solid var(--orange);
+    padding:6px 0 6px 26px;margin:30px 0;
+  }
+  .pull q{
+    font-family:'Archivo';font-weight:800;font-style:normal;
+    font-size:clamp(22px,3.2vw,30px);line-height:1.18;color:var(--purple);
+    quotes:none;
+  }
+  .dark .pull q{color:#fff}
+  .pull .src{
+    display:block;margin-top:12px;font-family:'Archivo Narrow';
+    letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--gray);
+    font-weight:600;
+  }
+
+  /* stat grid */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+  .stat{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:22px 18px;text-align:center;
+    box-shadow:0 10px 24px -18px rgba(29,17,96,.5);
+  }
+  .dark .stat{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
+  .stat .big{
+    font-family:'Anton';font-size:46px;line-height:.9;color:var(--orange);
+  }
+  .stat .lbl{
+    font-family:'Archivo Narrow';font-weight:600;letter-spacing:.1em;
+    text-transform:uppercase;font-size:11px;color:var(--gray);margin-top:8px;
+  }
+  .dark .stat .lbl{color:rgba(255,255,255,.6)}
+
+  /* two-col cards */
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;
+    box-shadow:0 14px 30px -22px rgba(29,17,96,.5);
+  }
+  .card.green{border-top:4px solid #1f9d55}
+  .card.amber{border-top:4px solid var(--orange)}
+  .card ul{list-style:none;margin-top:6px}
+  .card li{
+    position:relative;padding:8px 0 8px 26px;font-size:16px;
+    border-bottom:1px solid var(--line);color:#2a2734;
+  }
+  .card li:last-child{border-bottom:none}
+  .card li::before{
+    content:"";position:absolute;left:0;top:15px;width:9px;height:9px;border-radius:2px;
+  }
+  .card.green li::before{background:#1f9d55}
+  .card.amber li::before{background:var(--orange)}
+
+  /* timeline */
+  .timeline{margin-top:10px;border-left:2px solid var(--orange);padding-left:0}
+  .tl{position:relative;padding:0 0 26px 30px}
+  .tl::before{
+    content:"";position:absolute;left:-8px;top:4px;width:14px;height:14px;
+    border-radius:50%;background:var(--orange);border:3px solid var(--paper);
+  }
+  .alt .tl::before{border-color:var(--paper-2)}
+  .tl .yr{
+    font-family:'Archivo Narrow';font-weight:700;letter-spacing:.14em;
+    color:var(--purple);font-size:13px;text-transform:uppercase;
+  }
+  .tl .ev{font-size:16px;margin-top:2px;color:#2a2734}
+  .tl .ev b{color:var(--ink)}
+
+  /* family / bloodline */
+  .fam{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+  .fam .m{
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+  }
+  .fam .m .nm{font-family:'Archivo';font-weight:800;color:var(--purple);font-size:16px}
+  .fam .m .rl{font-size:14px;color:var(--gray);margin-top:3px}
+
+  /* front-office callout */
+  .fo{
+    background:linear-gradient(155deg,var(--purple),var(--purple-ink));
+    color:#fff;border-radius:20px;padding:38px 36px;margin-top:8px;
+    border:1px solid rgba(255,184,28,.25);
+    box-shadow:0 30px 60px -34px rgba(0,0,0,.7);
+  }
+  .fo h2{color:#fff;margin-bottom:6px}
+  .fo .sub{color:var(--sun);font-family:'Archivo Narrow';letter-spacing:.18em;
+    text-transform:uppercase;font-size:12px;font-weight:700;margin-bottom:22px}
+  .fo ol{list-style:none;counter-reset:c}
+  .fo li{
+    counter-increment:c;position:relative;padding:14px 0 14px 52px;
+    border-top:1px solid rgba(255,255,255,.12);font-size:17px;color:rgba(255,255,255,.9);
+  }
+  .fo li:first-child{border-top:none}
+  .fo li::before{
+    content:counter(c);position:absolute;left:0;top:12px;
+    width:34px;height:34px;border-radius:50%;
+    background:var(--orange);color:#fff;font-family:'Anton';font-size:18px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .fo li b{color:#fff}
+
+  /* footer */
+  footer{background:var(--purple-ink);color:rgba(255,255,255,.6);padding:32px 0;border-top:3px solid var(--orange)}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  footer .fcol{display:flex;align-items:center;gap:14px}
+  footer .avc-mark{height:34px}
+  footer .suns-mark{width:30px;height:30px;flex:none}
+  footer .fine{font-size:12px;max-width:40em;line-height:1.5;flex:1;min-width:260px}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;gap:30px;padding:40px 24px 46px}
+    .hero-portrait{max-width:300px}
+    .vitals .wrap{grid-template-columns:repeat(3,1fr)}
+    .vital:nth-child(3){border-right:none}
+    .vital:nth-child(n+4){border-top:1px solid rgba(255,255,255,.08)}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .twocol{grid-template-columns:1fr}
+    .fam{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:520px){
+    .vitals .wrap{grid-template-columns:repeat(2,1fr)}
+    .fam{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="wrap">
+    <div class="lockup">
+      <!-- Phoenix Suns logo -->
+      <svg class="suns-mark" viewBox="0 0 210 190" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="sunM" cx="0.5" cy="0.5" r="0.6">
+            <stop offset="0" stop-color="#ffb81c"/><stop offset="0.55" stop-color="#f7941d"/><stop offset="1" stop-color="#e56020"/></radialGradient>
+          <radialGradient id="ballM" cx="0.4" cy="0.35" r="0.75">
+            <stop offset="0" stop-color="#f07d2a"/><stop offset="1" stop-color="#d4541a"/></radialGradient>
+        </defs>
+        <g fill="#f7941d">
+          <path d="M70 116 L20 150 L30 150 L82 120 Z"/>
+          <path d="M76 126 L34 158 L46 158 L86 130 Z" fill="#e56020"/>
+          <path d="M64 108 L8 132 L18 134 L74 113 Z" fill="#ffb81c"/>
+        </g>
+        <polygon fill="url(#sunM)" stroke="#e56020" stroke-width="1"
+          points="120.0,15.0 129.0,49.9 150.6,21.1 145.6,56.8 176.6,38.4 158.2,69.4 193.9,64.4 165.1,86.0 200.0,95.0 165.1,104.0 193.9,125.6 158.2,120.6 176.6,151.6 145.6,133.2 150.6,168.9 129.0,140.1 120.0,175.0 111.0,140.1 89.4,168.9 94.4,133.2 63.4,151.6 81.8,120.6 46.1,125.6 74.9,104.0 40.0,95.0 74.9,86.0 46.1,64.4 81.8,69.4 63.4,38.4 94.4,56.8 89.4,21.1 111.0,49.9"/>
+        <g transform="rotate(-18 120 95)">
+          <circle cx="120" cy="95" r="40" fill="url(#ballM)"/>
+          <circle cx="120" cy="95" r="40" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+          <line x1="80" y1="95" x2="160" y2="95" stroke="#1a1a1a" stroke-width="2.5"/>
+          <line x1="120" y1="55" x2="120" y2="135" stroke="#1a1a1a" stroke-width="2.5"/>
+          <path d="M92 66 Q120 95 92 124" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+          <path d="M148 66 Q120 95 148 124" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+        </g>
+      </svg>
+      <span class="brand">Phoenix Suns<span>Get to Know · Player Feature</span></span>
+    </div>
+    <!-- AVC logo (white, for dark masthead) -->
+    <svg class="avc-mark" viewBox="0 0 340 64" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="30" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.2"/>
+      <circle cx="32" cy="32" r="22" stroke="#fff" stroke-width="2" fill="none" opacity="0.45"/>
+      <circle cx="32" cy="32" r="14" stroke="#fff" stroke-width="3" fill="none" opacity="0.85"/>
+      <line x1="22" y1="32" x2="43" y2="32" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+      <polyline points="37,26 43,32 37,38" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <line x1="78" y1="12" x2="78" y2="52" stroke="rgba(255,255,255,0.25)" stroke-width="1.2"/>
+      <text x="94" y="38" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="800" font-size="28" fill="#fff" letter-spacing="-0.5">AVC</text>
+      <text x="94" y="53" font-family="Archivo Narrow, Helvetica, Arial, sans-serif" font-weight="400" font-size="7.8" fill="rgba(255,255,255,0.6)" letter-spacing="2.4">ACCELERATED VELOCITY CONSULTING</text>
+    </svg>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Get to Know</span>
+      <h1>Koa <span class="last">Peat</span></h1>
+      <p class="dek">A homegrown warrior comes home. The most decorated winner in
+      USA Basketball's junior history — and a Gilbert kid — joins the Suns to anchor
+      the next era in the Valley.</p>
+      <div class="hero-meta">
+        <span class="chip hot">2026 Draft · No. 30</span>
+        <span class="chip">Forward</span>
+        <span class="chip">Arizona Wildcats</span>
+        <span class="chip">Gilbert, AZ</span>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <div class="num">KP</div>
+      <div class="mono">Koa Peat · Forward</div>
+      <div class="slot-note">▢ drop official photo here</div>
+    </div>
+  </div>
+</header>
+
+<!-- VITALS -->
+<div class="vitals">
+  <div class="wrap">
+    <div class="vital"><div class="k">Position</div><div class="v">Forward</div></div>
+    <div class="vital"><div class="k">Height</div><div class="v">6&#39;8&quot;</div></div>
+    <div class="vital"><div class="k">Weight</div><div class="v">245 lbs</div></div>
+    <div class="vital"><div class="k">Wingspan</div><div class="v">6&#39;11&quot;+</div></div>
+    <div class="vital"><div class="k">Born</div><div class="v">Jan 20, 2007</div></div>
+    <div class="vital"><div class="k">Age</div><div class="v">19</div></div>
+  </div>
+</div>
+
+<!-- LEDE -->
+<section>
+  <div class="wrap lede">
+    <div class="sec-label">The Headline</div>
+    <h2>A warrior named on purpose</h2>
+    <p>In Hawaiian, <span class="em">&ldquo;Koa&rdquo;</span> means strong warrior. Koa Peat
+    has spent his entire life making the name look like a scouting report. He is the
+    youngest of seven children in one of Arizona&rsquo;s great athletic families, a four-time
+    state champion who never lost a title game, and the only player in USA Basketball
+    history to win <span class="em">four</span> men&rsquo;s junior gold medals. Now, after
+    a freshman season that carried Arizona to its first Final Four in a quarter-century,
+    the 19-year-old from Gilbert is coming home to play for the Suns.</p>
+    <p>For a franchise rebuilding its identity around youth, toughness, and a
+    &ldquo;locked-in&rdquo; culture, Peat is not a project. He is a proven winner who has
+    answered every question the game has asked him &mdash; usually by raising the trophy
+    at the end.</p>
+    <div class="pull">
+      <q>He plays like the stakes are personal. Wherever Koa Peat has been, the
+      scoreboard at the end has read the same way.</q>
+      <span class="src">AVC Scouting Note</span>
+    </div>
+  </div>
+</section>
+
+<!-- BY THE NUMBERS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-label">By the Numbers</div>
+    <h2>The freshman line</h2>
+    <p>One-and-done at Arizona, Peat was the engine of a Big&nbsp;12 championship team and
+    the Most Outstanding Player of the NCAA Tournament&rsquo;s West Region.</p>
+    <div class="stats">
+      <div class="stat"><div class="big">14.1</div><div class="lbl">Points / game</div></div>
+      <div class="stat"><div class="big">5.6</div><div class="lbl">Rebounds / game</div></div>
+      <div class="stat"><div class="big">2.6</div><div class="lbl">Assists / game</div></div>
+      <div class="stat"><div class="big">52.8%</div><div class="lbl">Field goal %</div></div>
+    </div>
+    <div class="stats" style="margin-top:16px">
+      <div class="stat"><div class="big">30</div><div class="lbl">Pts in debut vs. #3 Florida</div></div>
+      <div class="stat"><div class="big">17.2</div><div class="lbl">Pts/game in NCAA Tourney</div></div>
+      <div class="stat"><div class="big">67%</div><div class="lbl">Finishing at the rim</div></div>
+      <div class="stat"><div class="big">36</div><div class="lbl">Starts as a freshman</div></div>
+    </div>
+    <p style="margin-top:22px;font-size:15px;color:var(--gray)">In his first college game,
+    Peat dropped 30 points on the defending national champions. He closed the year named
+    Third-Team All-Big&nbsp;12 and to the Big&nbsp;12 All-Freshman Team.</p>
+  </div>
+</section>
+
+<!-- BLOODLINE -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">The Bloodline</div>
+    <h2>Built by a family of pros</h2>
+    <p>Toughness is the family business. Koa&rsquo;s father, <b>Todd Peat</b>, played nine
+    seasons as an NFL offensive guard for the Cardinals and Raiders. His brother
+    <b>Andrus Peat</b> became a first-round NFL offensive lineman. Across seven siblings,
+    nearly every Peat went on to play college or professional sports &mdash; football and
+    basketball both. Koa grew up the youngest, competing against bigger, stronger,
+    older athletes every single day. It shows in how he plays.</p>
+    <div class="fam">
+      <div class="m"><div class="nm">Todd Peat</div><div class="rl">Father · 9-yr NFL guard (Cardinals, Raiders)</div></div>
+      <div class="m"><div class="nm">Jana Peat</div><div class="rl">Mother · multi-sport HS athlete; Native Hawaiian heritage</div></div>
+      <div class="m"><div class="nm">Andrus Peat</div><div class="rl">Brother · first-round NFL offensive lineman</div></div>
+      <div class="m"><div class="nm">Todd Jr. · Cassius · Keona</div><div class="rl">Brothers · college football</div></div>
+      <div class="m"><div class="nm">Leilani · Maya</div><div class="rl">Sisters · Division I women&rsquo;s basketball</div></div>
+      <div class="m"><div class="nm">Koa Peat</div><div class="rl">Youngest of seven · the basketball one</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME / TIMELINE -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-label">The Résumé</div>
+    <h2>A career of finishing the job</h2>
+    <p>Two résumés, really — a high school dynasty in the Valley and an unprecedented
+    run with USA Basketball.</p>
+
+    <div class="twocol">
+      <div>
+        <h3 style="margin-bottom:14px">Perry High School (Gilbert)</h3>
+        <div class="timeline">
+          <div class="tl"><div class="yr">2022 · Freshman</div><div class="ev">Leads Perry to its <b>first-ever 6A state title</b>.</div></div>
+          <div class="tl"><div class="yr">2023 · Sophomore</div><div class="ev">35-point championship game; <b>Gatorade AZ Player of the Year</b>.</div></div>
+          <div class="tl"><div class="yr">2024 · Junior</div><div class="ev">Third straight title, erasing a 17-point deficit. Repeats POY.</div></div>
+          <div class="tl"><div class="yr">2025 · Senior</div><div class="ev">Breaks his right hand days before the playoffs &mdash; <b>returns to win a fourth straight title</b>. Three-time Gatorade AZ POY.</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:14px">USA Basketball</h3>
+        <div class="timeline">
+          <div class="tl"><div class="yr">2022 · U17 World Cup</div><div class="ev"><b>Gold</b> · All-Tournament Team.</div></div>
+          <div class="tl"><div class="yr">2023 · U16 Americas</div><div class="ev"><b>Gold</b> · 17.2 ppg. Named <b>USA Basketball Male Athlete of the Year</b>.</div></div>
+          <div class="tl"><div class="yr">2024 · U17 World Cup</div><div class="ev"><b>Gold</b> · first player ever to win two U17 World Cup golds.</div></div>
+          <div class="tl"><div class="yr">2025 · U19 World Cup</div><div class="ev"><b>Gold</b> · first player in USA Basketball history with four men&rsquo;s junior golds.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="pull">
+      <q>Four gold medals. Four state titles. He has never been to a championship
+      game and lost.</q>
+      <span class="src">The pattern that defines him</span>
+    </div>
+  </div>
+</section>
+
+<!-- SCOUTING -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">The Scouting Report</div>
+    <h2>How he wins — and where he grows</h2>
+    <p>Peat projects as a powerful, versatile combo forward: too quick for bigger
+    bigs, too strong for smaller wings. The frame is NBA-ready today; the jumper is
+    the swing skill for his ceiling.</p>
+    <div class="twocol">
+      <div class="card green">
+        <h3>Strengths</h3>
+        <ul>
+          <li><b>Elite rim finisher</b> — physical through contact, 67% at the basket</li>
+          <li><b>NBA-ready body</b> — 245 lbs with a 6&#39;11&quot;+ wingspan and real motor</li>
+          <li><b>Connective passer</b> — high IQ, 2.6 assists to just 1.6 turnovers</li>
+          <li><b>Two-way versatility</b> — can guard bigs and switch onto the perimeter</li>
+          <li><b>Battle-tested</b> — thrives on the biggest stages, on every level</li>
+        </ul>
+      </div>
+      <div class="card amber">
+        <h3>Areas to Develop</h3>
+        <ul>
+          <li><b>Three-point range</b> — mechanics and volume need to become reliable</li>
+          <li><b>Free-throw touch</b> — 62% leaves points on the table</li>
+          <li><b>Handle in space</b> — limited advanced separation off the dribble</li>
+          <li><b>Less power-reliant</b> — adding finesse vs. NBA-sized bigs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FIT -->
+<section class="dark">
+  <div class="wrap">
+    <div class="sec-label">The Fit in Phoenix</div>
+    <h2>Why he&rsquo;s a Sun</h2>
+    <p>The Suns have moved past the superteam era into a younger, cost-controlled,
+    identity-driven build around Devin Booker. Head coach Jordan Ott is forging a
+    culture defined by resilience and a &ldquo;locked-in&rdquo; mindset &mdash; players who are
+    bothered when they lose. Peat is a near-perfect cultural fit: a winner with a
+    blue-collar motor, drafted onto a rookie contract that protects the franchise&rsquo;s
+    long-term flexibility.</p>
+    <p>And then there&rsquo;s the story. A Gilbert kid &mdash; raised 20 minutes from the
+    arena, a state-title fixture Valley fans have watched grow up &mdash; now wearing the
+    Suns. That&rsquo;s not just a roster move. It&rsquo;s a marketing and community gift.</p>
+    <div class="pull">
+      <q>Found money with a hometown jersey. High-upside, cost-controlled, and
+      already beloved in the Valley.</q>
+      <span class="src">The front-office case</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTANGIBLES -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-label">The Person</div>
+    <h2>Off the floor</h2>
+    <p>Peat&rsquo;s reputation off the court matches the on-court résumé. In high school he
+    volunteered with the Gila River Indian Community and coached youth basketball and
+    football &mdash; giving back to the same Arizona community that raised him. Teammates
+    and coaches describe a player who leads by standard, not by speech: he sets the
+    tone with how hard he plays and expects everyone to meet it.</p>
+    <p>The broken-hand story is the one that travels. Two days before the state
+    quarterfinals of his senior year, Peat broke his right hand. He had surgery,
+    skipped the McDonald&rsquo;s All-American Game and Nike Hoop Summit to protect his
+    future &mdash; and still came back to lead Perry to a fourth straight championship.
+    That&rsquo;s the competitor the Suns just drafted.</p>
+  </div>
+</section>
+
+<!-- FRONT OFFICE CONVERSATION STARTERS -->
+<section>
+  <div class="wrap">
+    <div class="fo">
+      <h2>For the Front Office</h2>
+      <div class="sub">Conversation starters · when you call Koa</div>
+      <ol>
+        <li><b>Welcome him home.</b> He grew up in Gilbert and starred at Perry. Tell him what it means to the Valley that he&rsquo;s a Sun &mdash; this is personal for him, and for the fan base.</li>
+        <li><b>Honor the bloodline.</b> Ask about growing up the youngest of seven in the Peat athletic family &mdash; his dad&rsquo;s and brother&rsquo;s NFL careers shaped his toughness. It&rsquo;s the fastest way to his story.</li>
+        <li><b>Respect the winning.</b> Four state titles, four USA Basketball golds, a Final Four. Let him know you see him as a winner first &mdash; that&rsquo;s the identity he carries.</li>
+        <li><b>Name the warrior.</b> &ldquo;Koa&rdquo; means strong warrior. It&rsquo;s a meaningful nod to his Hawaiian heritage and exactly the player you drafted.</li>
+        <li><b>Paint the development picture.</b> He knows the jumper is the next step. Show him the plan &mdash; player development, the role next to Booker, the path to minutes under Jordan Ott.</li>
+        <li><b>Invoke the comeback.</b> Reference the broken hand and the fourth title. It tells him you did the homework and you value who he is, not just the stat line.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fcol">
+      <svg class="suns-mark" viewBox="0 0 210 190" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="sunF" cx="0.5" cy="0.5" r="0.6">
+            <stop offset="0" stop-color="#ffb81c"/><stop offset="0.55" stop-color="#f7941d"/><stop offset="1" stop-color="#e56020"/></radialGradient>
+          <radialGradient id="ballF" cx="0.4" cy="0.35" r="0.75">
+            <stop offset="0" stop-color="#f07d2a"/><stop offset="1" stop-color="#d4541a"/></radialGradient>
+        </defs>
+        <g fill="#f7941d">
+          <path d="M70 116 L20 150 L30 150 L82 120 Z"/>
+          <path d="M76 126 L34 158 L46 158 L86 130 Z" fill="#e56020"/>
+          <path d="M64 108 L8 132 L18 134 L74 113 Z" fill="#ffb81c"/>
+        </g>
+        <polygon fill="url(#sunF)" stroke="#e56020" stroke-width="1"
+          points="120.0,15.0 129.0,49.9 150.6,21.1 145.6,56.8 176.6,38.4 158.2,69.4 193.9,64.4 165.1,86.0 200.0,95.0 165.1,104.0 193.9,125.6 158.2,120.6 176.6,151.6 145.6,133.2 150.6,168.9 129.0,140.1 120.0,175.0 111.0,140.1 89.4,168.9 94.4,133.2 63.4,151.6 81.8,120.6 46.1,125.6 74.9,104.0 40.0,95.0 74.9,86.0 46.1,64.4 81.8,69.4 63.4,38.4 94.4,56.8 89.4,21.1 111.0,49.9"/>
+        <g transform="rotate(-18 120 95)">
+          <circle cx="120" cy="95" r="40" fill="url(#ballF)"/>
+          <circle cx="120" cy="95" r="40" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+          <line x1="80" y1="95" x2="160" y2="95" stroke="#1a1a1a" stroke-width="2.5"/>
+          <line x1="120" y1="55" x2="120" y2="135" stroke="#1a1a1a" stroke-width="2.5"/>
+          <path d="M92 66 Q120 95 92 124" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+          <path d="M148 66 Q120 95 148 124" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+        </g>
+      </svg>
+      <svg class="avc-mark" viewBox="0 0 340 64" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.2"/>
+        <circle cx="32" cy="32" r="22" stroke="#fff" stroke-width="2" fill="none" opacity="0.45"/>
+        <circle cx="32" cy="32" r="14" stroke="#fff" stroke-width="3" fill="none" opacity="0.85"/>
+        <line x1="22" y1="32" x2="43" y2="32" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+        <polyline points="37,26 43,32 37,38" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <line x1="78" y1="12" x2="78" y2="52" stroke="rgba(255,255,255,0.25)" stroke-width="1.2"/>
+        <text x="94" y="38" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="800" font-size="28" fill="#fff" letter-spacing="-0.5">AVC</text>
+        <text x="94" y="53" font-family="Archivo Narrow, Helvetica, Arial, sans-serif" font-weight="400" font-size="7.8" fill="rgba(255,255,255,0.6)" letter-spacing="2.4">ACCELERATED VELOCITY CONSULTING</text>
+      </svg>
+    </div>
+    <span class="fine">Prepared for Phoenix Suns ownership &amp; front office · &ldquo;Get to Know&rdquo;
+    player feature series. Compiled from public reporting, USA Basketball, Arizona Athletics,
+    and NBA Draft scouting. Reusable template — same format for every player the Suns draft or acquire.</span>
+  </div>
+</footer>
+
+</body>
+</html>

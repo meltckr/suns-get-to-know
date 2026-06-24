@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d1160"/>
+      <stop offset="0.55" stop-color="#160d4a"/>
+      <stop offset="1" stop-color="#0c0726"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.05" r="0.6">
+      <stop offset="0" stop-color="#e56020" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#e56020" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ray" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb81c"/>
+      <stop offset="1" stop-color="#e56020"/>
+    </linearGradient>
+    <linearGradient id="lastname" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f7941d"/>
+      <stop offset="1" stop-color="#ffb81c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- faint sunburst motif top-right -->
+  <g transform="translate(1000,70)" opacity="0.16">
+    <g fill="url(#ray)">
+      <g id="r"><polygon points="0,-260 14,-60 -14,-60"/></g>
+      <use href="#r" transform="rotate(30)"/><use href="#r" transform="rotate(60)"/>
+      <use href="#r" transform="rotate(90)"/><use href="#r" transform="rotate(120)"/>
+      <use href="#r" transform="rotate(150)"/><use href="#r" transform="rotate(180)"/>
+      <use href="#r" transform="rotate(210)"/><use href="#r" transform="rotate(240)"/>
+      <use href="#r" transform="rotate(270)"/><use href="#r" transform="rotate(300)"/>
+      <use href="#r" transform="rotate(330)"/>
+    </g>
+  </g>
+
+  <!-- top accent bar -->
+  <rect x="0" y="0" width="1200" height="6" fill="#e56020"/>
+
+  <!-- Phoenix Suns logo top-right -->
+  <g transform="translate(978,34) scale(0.92)">
+    <g fill="#f7941d">
+      <path d="M70 116 L20 150 L30 150 L82 120 Z"/>
+      <path d="M76 126 L34 158 L46 158 L86 130 Z" fill="#e56020"/>
+      <path d="M64 108 L8 132 L18 134 L74 113 Z" fill="#ffb81c"/>
+    </g>
+    <polygon fill="url(#ray)" stroke="#e56020" stroke-width="1"
+      points="120.0,15.0 129.0,49.9 150.6,21.1 145.6,56.8 176.6,38.4 158.2,69.4 193.9,64.4 165.1,86.0 200.0,95.0 165.1,104.0 193.9,125.6 158.2,120.6 176.6,151.6 145.6,133.2 150.6,168.9 129.0,140.1 120.0,175.0 111.0,140.1 89.4,168.9 94.4,133.2 63.4,151.6 81.8,120.6 46.1,125.6 74.9,104.0 40.0,95.0 74.9,86.0 46.1,64.4 81.8,69.4 63.4,38.4 94.4,56.8 89.4,21.1 111.0,49.9"/>
+    <g transform="rotate(-18 120 95)">
+      <circle cx="120" cy="95" r="40" fill="#e0641c"/>
+      <circle cx="120" cy="95" r="40" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+      <line x1="80" y1="95" x2="160" y2="95" stroke="#1a1a1a" stroke-width="2.5"/>
+      <line x1="120" y1="55" x2="120" y2="135" stroke="#1a1a1a" stroke-width="2.5"/>
+      <path d="M92 66 Q120 95 92 124" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+      <path d="M148 66 Q120 95 148 124" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- eyebrow -->
+  <text x="80" y="180" font-family="Arial, Helvetica, sans-serif" font-weight="700"
+        font-size="26" letter-spacing="10" fill="#ffb81c">GET TO KNOW</text>
+
+  <!-- name -->
+  <text x="74" y="330" font-family="Arial Black, Arial, sans-serif" font-weight="900"
+        font-size="150" letter-spacing="-2" fill="#ffffff">KOA</text>
+  <text x="74" y="470" font-family="Arial Black, Arial, sans-serif" font-weight="900"
+        font-size="150" letter-spacing="-2" fill="url(#lastname)">PEAT</text>
+
+  <!-- vitals chips -->
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#ffffff">
+    <rect x="80" y="512" width="296" height="46" rx="23" fill="#e56020"/>
+    <text x="106" y="542" letter-spacing="1">2026 DRAFT · NO. 30</text>
+
+    <rect x="392" y="512" width="152" height="46" rx="23" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5"/>
+    <text x="416" y="542" letter-spacing="1">FORWARD</text>
+
+    <rect x="560" y="512" width="244" height="46" rx="23" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5"/>
+    <text x="584" y="542" letter-spacing="1">ARIZONA · GILBERT</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="80" y1="592" x2="1120" y2="592" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1"/>
+
+  <!-- AVC logo (white) bottom-left -->
+  <g transform="translate(80,596) scale(0.74)">
+    <circle cx="32" cy="32" r="30" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.2"/>
+    <circle cx="32" cy="32" r="22" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.45"/>
+    <circle cx="32" cy="32" r="14" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.85"/>
+    <line x1="22" y1="32" x2="43" y2="32" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+    <polyline points="37,26 43,32 37,38" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <line x1="78" y1="14" x2="78" y2="50" stroke="rgba(255,255,255,0.25)" stroke-width="1.2"/>
+    <text x="94" y="38" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="28" fill="#ffffff" letter-spacing="-0.5">AVC</text>
+    <text x="94" y="52" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="7.8" fill="rgba(255,255,255,0.55)" letter-spacing="2.4">ACCELERATED VELOCITY CONSULTING</text>
+  </g>
+
+  <!-- series tag bottom-right -->
+  <text x="1120" y="616" text-anchor="end" font-family="Arial, Helvetica, sans-serif"
+        font-weight="700" font-size="15" letter-spacing="3" fill="rgba(255,255,255,0.5)">PLAYER FEATURE SERIES</text>
+</svg>
