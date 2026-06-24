@@ -143,26 +143,34 @@
   /* portrait / monogram slot — replace with official photo */
   .hero-portrait{
     position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;
-    background:
-      linear-gradient(180deg, rgba(255,184,28,.16), rgba(12,7,38,.6)),
-      linear-gradient(160deg,#2a1a7a,#0c0726);
+    background:linear-gradient(160deg,#2a1a7a,#0c0726);
     border:1px solid rgba(255,255,255,.14);
     box-shadow:0 30px 60px -24px rgba(0,0,0,.7);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    text-align:center;
   }
-  .hero-portrait .num{
-    font-family:'Anton';font-size:170px;line-height:.8;color:#fff;opacity:.96;
-    text-shadow:0 8px 30px rgba(0,0,0,.45);
+  .hero-portrait img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;
   }
-  .hero-portrait .mono{
-    font-family:'Archivo Narrow';letter-spacing:.3em;text-transform:uppercase;
-    font-size:13px;color:var(--sun);margin-top:14px;font-weight:700;
+  .hero-portrait .plate{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:42px 18px 14px;
+    background:linear-gradient(180deg, rgba(12,7,38,0) 0%, rgba(12,7,38,.85) 70%);
+    display:flex;align-items:flex-end;justify-content:space-between;gap:8px;
   }
-  .hero-portrait .slot-note{
-    position:absolute;bottom:10px;left:0;right:0;
-    font-size:10px;letter-spacing:.18em;text-transform:uppercase;
-    color:rgba(255,255,255,.4);font-family:'Archivo Narrow';
+  .hero-portrait .plate .nm{
+    font-family:'Anton';font-size:26px;line-height:.9;color:#fff;letter-spacing:.5px;
+  }
+  .hero-portrait .plate .nm small{
+    display:block;font-family:'Archivo Narrow';font-weight:700;font-size:11px;
+    letter-spacing:.22em;color:var(--sun);margin-top:5px;
+  }
+  .hero-portrait .plate .jersey{
+    font-family:'Anton';font-size:44px;line-height:.8;color:var(--orange-bright);
+  }
+  .hero-portrait .credit{
+    position:absolute;top:10px;right:12px;
+    font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(255,255,255,.6);font-family:'Archivo Narrow';
+    background:rgba(12,7,38,.45);padding:3px 7px;border-radius:4px;
   }
 
   /* ---------- VITALS STRIP ---------- */
@@ -406,9 +414,12 @@
       </div>
     </div>
     <div class="hero-portrait">
-      <div class="num">KP</div>
-      <div class="mono">Koa Peat · Forward</div>
-      <div class="slot-note">▢ drop official photo here</div>
+      <img src="assets/koa-peat.jpg" alt="Koa Peat, Arizona Wildcats forward, drives to the basket">
+      <div class="credit">Photo: MGoBlog · CC BY 4.0</div>
+      <div class="plate">
+        <div class="nm">Koa Peat<small>Forward · Arizona</small></div>
+        <div class="jersey">10</div>
+      </div>
     </div>
   </div>
 </header>
