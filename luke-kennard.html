@@ -331,6 +331,38 @@
   }
   .fo li b{color:#fff}
 
+  /* sentiment board */
+  .sentiment-board{
+    background:linear-gradient(155deg,var(--purple),var(--purple-ink));
+    color:#fff;border-radius:20px;padding:38px 36px;margin-top:8px;
+    border:1px solid rgba(255,184,28,.25);
+    box-shadow:0 30px 60px -34px rgba(0,0,0,.7);
+  }
+  .sentiment-board h2{color:#fff;margin-bottom:6px}
+  .sentiment-board .sub{
+    color:var(--sun);font-family:'Archivo Narrow';letter-spacing:.18em;
+    text-transform:uppercase;font-size:12px;font-weight:700;margin-bottom:22px;
+  }
+  .sentiment-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .sentiment-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;padding:20px;
+  }
+  .sentiment-card .tag{
+    display:block;color:var(--sun);font-family:'Archivo Narrow';font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;font-size:11px;margin-bottom:9px;
+  }
+  .sentiment-card h3{color:#fff;margin-bottom:8px}
+  .sentiment-card p{color:rgba(255,255,255,.82);font-size:16px;margin-bottom:10px}
+  .sentiment-card q{
+    display:block;color:#fff;font-family:'Archivo';font-weight:800;
+    font-size:19px;line-height:1.2;quotes:none;margin:8px 0 10px;
+  }
+  .sentiment-card a{
+    color:var(--sun);font-family:'Archivo Narrow';font-weight:700;
+    letter-spacing:.12em;text-transform:uppercase;font-size:11px;
+  }
+
   /* footer */
   footer{background:var(--purple-ink);color:rgba(255,255,255,.6);padding:32px 0;border-top:3px solid var(--orange)}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
@@ -348,6 +380,7 @@
     .stats{grid-template-columns:repeat(2,1fr)}
     .twocol{grid-template-columns:1fr}
     .fam{grid-template-columns:repeat(2,1fr)}
+    .sentiment-grid{grid-template-columns:1fr}
   }
   @media(max-width:520px){
     .vitals .wrap{grid-template-columns:repeat(2,1fr)}
@@ -580,20 +613,42 @@
   </div>
 </section>
 
-<!-- FRONT OFFICE CONVERSATION STARTERS -->
+<!-- MEDIA / FAN SENTIMENT -->
 <section>
   <div class="wrap">
-    <div class="fo">
-      <h2>For the Front Office</h2>
-      <div class="sub">Conversation starters · when you call Luke</div>
-      <ol>
-        <li><b>Name the role clearly.</b> Tell him Phoenix values the simplicity of what he brings: elite spacing, fast decisions, and a shooter defenses cannot leave.</li>
-        <li><b>Connect it to the roster.</b> Explain how his gravity helps Booker, Green, Bridges, and Williams. This is not a generic bench-shooter pitch; it is a specific lineup need.</li>
-        <li><b>Respect the Duke thread.</b> He and Grayson Allen share the Duke shooting lineage. The clean message: Phoenix moved one elite shooter and immediately prioritized another.</li>
-        <li><b>Ask about shot volume.</b> Make it collaborative. His value rises when he is hunting enough threes to bend the floor, not just protecting percentage.</li>
-        <li><b>Be direct about defense.</b> He knows the postseason question. Frame it around matchups, preparation, and earning closing-minute trust.</li>
-        <li><b>Make the status clean.</b> Until the team announces it, keep external language at reported agreement. Internally, the basketball role is already easy to define.</li>
-      </ol>
+    <div class="sentiment-board">
+      <h2>What They&rsquo;re Saying</h2>
+      <div class="sub">Media, fan, and creator sentiment · early read</div>
+      <div class="sentiment-grid">
+        <article class="sentiment-card">
+          <span class="tag">Local Suns Media</span>
+          <h3>The fit is being treated as obvious.</h3>
+          <q>&ldquo;One open roster spot and one glaring need.&rdquo;</q>
+          <p>Bright Side of the Sun framed Kennard as the clean answer after Phoenix traded away Grayson Allen and Royce O&rsquo;Neale. The local read is practical approval: the Suns lost spacing, then filled the spacing slot with one of the best available specialists.</p>
+          <a href="https://www.brightsideofthesun.com/suns-free-agency-rumors-news/107041/luke-kennard-signing-grayson-allen-replacement-shooting-depth-roster">Read local analysis</a>
+        </article>
+        <article class="sentiment-card">
+          <span class="tag">National / Lakers Media</span>
+          <h3>Los Angeles coverage read it as a real loss.</h3>
+          <q>&ldquo;One of the best shooters on their roster and in the NBA.&rdquo;</q>
+          <p>Silver Screen &amp; Roll emphasized that Kennard had been productive enough for the Lakers that losing him at this number felt meaningful. That is useful context for Phoenix: the signing was not viewed as a replacement-level flyer by the team that just had him.</p>
+          <a href="https://www.silverscreenandroll.com/lakers-rumors/120055/lakers-rumors-report-luke-kennard-nba-free-agency-contract-suns">Read Lakers reaction</a>
+        </article>
+        <article class="sentiment-card">
+          <span class="tag">Suns Fan Read</span>
+          <h3>The reaction lane is relief with a defensive caveat.</h3>
+          <q>&ldquo;Come off the bench and shoot.&rdquo;</q>
+          <p>The fan logic is not complicated: Kennard gives Phoenix an elite shooter after the Bridges move created a spacing concern. The pushback is equally predictable: he does not solve defense, rim pressure, or postseason matchup hunting.</p>
+          <a href="https://www.brightsideofthesun.com/suns-free-agency-rumors-news/107041/luke-kennard-signing-grayson-allen-replacement-shooting-depth-roster">Read the Suns thread</a>
+        </article>
+        <article class="sentiment-card">
+          <span class="tag">X / Creator Ecosystem</span>
+          <h3>The pre-signing drumbeat had Kennard near the top.</h3>
+          <q>&ldquo;This is the name that should be at the top of the list.&rdquo;</q>
+          <p>Before the reported agreement, Suns free-agency watch coverage and embedded social framing already pointed to Kennard as the cleanest shooting target. The YouTube/podcast angle to expect: less &ldquo;blockbuster&rdquo; and more &ldquo;roster balance after the bigger move.&rdquo;</p>
+          <a href="https://www.brightsideofthesun.com/suns-free-agency-rumors-news/106897/phoenix-suns-free-agency-watch-the-shooting-guard-edition">Read target board</a>
+        </article>
+      </div>
     </div>
   </div>
 </section>
